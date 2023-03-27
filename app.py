@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+
 
 app = Flask(__name__)
 
@@ -6,4 +7,7 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-# @app.route("/")
+
+@app.route('/starwars')
+def starwars():
+    return render_template('starwars.html')       

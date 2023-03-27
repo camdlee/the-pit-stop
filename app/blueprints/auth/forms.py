@@ -17,3 +17,16 @@ class RegistrationForm(Flaskform):
     submit_btn = SubmitField('Sign Up')
 
 
+#------------- Login Form -----------------
+class LoginForm(Flaskform):
+    email = EmailField('Email: ', validators=[DataRequired()])
+    password = PasswordField('Password: ', validators=[DataRequired()])
+    submit_btn = SubmitField('Login')
+
+
+#------------- Edit Profile -----------------
+class EditProfile(Flaskform):
+    first_name = StringField('First Name: ', validators=[DataRequired()])
+    last_name = StringField('Last Name: ', validators=[DataRequired()])
+    email = EmailField('Email: ', validators=[DataRequired()])
+    submit_btn = SubmitField('Update')
